@@ -1,6 +1,6 @@
 # generic_log
 single header generic log header file.
-just add [log.h](log.h) to your project.
+just add [generic_log.h](generic_log.h) to your project.
 # config
 ```
 valid log levels:
