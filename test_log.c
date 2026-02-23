@@ -1,3 +1,4 @@
+#ifdef GENERIC_LOG_TEST
 #include "generic_log.h"
 
 int main() {
@@ -23,3 +24,4 @@ int main() {
     LOGE("This is an error message");
     return 0;
 }
+#endif
