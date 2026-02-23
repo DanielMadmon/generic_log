@@ -61,7 +61,7 @@ void tiny_logger(LOG_LEVEL_E level, const char * fmt, ...) {
     va_end(args);
 }
 
-#define LOG_DBG(fmt, ...) tiny_logger(LOG_DBG, fmt, ##__VA_ARGS__)
-#define LOG_INFO(fmt, ...) tiny_logger(LOG_INFO, fmt, ##__VA_ARGS__)
-#define LOG_WARN(fmt, ...) tiny_logger(LOG_WARN, fmt, ##__VA_ARGS__)
-#define LOG_ERR(fmt, ...) tiny_logger(LOG_ERR, fmt, ##__VA_ARGS__)
+#define LOGD(fmt, ...) tiny_logger(LOG_DBG, fmt, ##__VA_ARGS__)
+#define LOGI(fmt, ...) tiny_logger(LOG_INFO, fmt, ##__VA_ARGS__)
+#define LOGW(fmt, ...) tiny_logger(LOG_WARN, fmt, ##__VA_ARGS__)
+#define LOGE(fmt, ...) tiny_logger(LOG_ERR, fmt, ##__VA_ARGS__)
