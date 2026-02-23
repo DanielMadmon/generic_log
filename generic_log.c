@@ -38,6 +38,6 @@ void generic_logger(LOG_LEVEL_E level, const char * fmt, ...) {
         printf("[%s]",type[level]); 
         vfprintf(stdout, fmt, args);
         printf("%s",colors[LOG_LEVEL_LEN]);
-        printf("\n%s", colors[LOG_DBG]);
+        printf("%s\n", colors[LOG_DBG]);
     va_end(args);
 }
