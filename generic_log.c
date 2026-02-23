@@ -15,7 +15,7 @@ static const char* colors[LOG_LEVEL_LEN + 1] = {
     "\x1b[32m", // green 
     "\x1b[1;33m", // yellow
     "\x1b[1;31m" // red
-    "\x1b[m"     //normal
+    "\x1b[0m"     //normal
 };
 
 #ifdef DYN_LOG
