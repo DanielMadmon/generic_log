@@ -10,11 +10,12 @@ static const char* type[LOG_LEVEL_LEN] = {
 }; 
 
 
-static const char* colors[LOG_LEVEL_LEN] = {
-    "\x1b[0m", // white
+static const char* colors[LOG_LEVEL_LEN + 1] = {
+    "\x1b[37m", // white
     "\x1b[32m", // green 
     "\x1b[1;33m", // yellow
     "\x1b[1;31m" // red
+    "\x1b[m"     //normal
 };
 
 #ifdef DYN_LOG
@@ -36,6 +37,7 @@ void generic_logger(LOG_LEVEL_E level, const char * fmt, ...) {
         
         printf("[%s]",type[level]); 
         vfprintf(stdout, fmt, args);
+        printf("%s",colors[LOG_LEVEL_LEN]);
         printf("\n%s", colors[LOG_DBG]);
     va_end(args);
 }
