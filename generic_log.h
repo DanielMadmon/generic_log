@@ -16,8 +16,7 @@ typedef enum {
 
 #ifdef GENERIC_LOG_LEVEL_SET
     #define LOG_LEVEL_CUR GENERIC_LOG_LEVEL_SET
-
-#elifdef DYN_LOG
+#elif defined(DYN_LOG)
     #define LOG_LEVEL_CUR __log_level_dyn
     void log_level_set(LOG_LEVEL_E level);
 #else
