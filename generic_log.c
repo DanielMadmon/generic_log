@@ -9,7 +9,6 @@ static const char* type[LOG_LEVEL_LEN] = {
     "ERR"
 }; 
 
-
 static const char* colors[LOG_LEVEL_LEN + 1] = {
     "\x1b[37m", // white
     "\x1b[32m", // green 

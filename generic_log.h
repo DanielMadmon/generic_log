@@ -23,7 +23,7 @@ typedef enum {
     #error "must define either DYN_LOG or LOG_LEVEL."
 #endif
 
-void generic_logger(LOG_LEVEL_E level, const char * fmt, ...);
+void generic_logger(LOG_LEVEL_E level, const char * fmt, ...)__attribute__((format(printf,2,3)));
 
 #define LOGD(fmt, ...) generic_logger(LOG_DBG, fmt, ##__VA_ARGS__)
 #define LOGI(fmt, ...) generic_logger(LOG_INFO, fmt, ##__VA_ARGS__)
