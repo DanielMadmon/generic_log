@@ -1,5 +1,5 @@
 # generic_log
-single header generic log header file.
+single header c lib for color printed log messages with log level control.
 just add [generic_log.h](generic_log.h) to your project.
 # config
 ```
